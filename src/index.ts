@@ -27,7 +27,6 @@ export default {
 		let lower_country: string = userCountry.toLowerCase();
 		let r2ObjectName: string = lower_country + '.png';
 		let imageFromTunnel: string = 'https://stunnel.kumocloud.online/secure/' + userCountry
-		let r2ObjectLocation: string = 'https://r2.kumocloud.online/' + r2ObjectName;
 		
 		let currentDateTime: Date = new Date();
 		
