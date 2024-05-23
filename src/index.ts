@@ -26,7 +26,7 @@ export default {
 		let userCountry = request.headers.get('cf-ipcountry');
 		let lower_country: string = userCountry.toLowerCase();
 		let r2ObjectName: string = lower_country + '.png';
-		let imageFromTunnel: string = 'https://stunnel.kumocloud.online/secure/' + userCountry
+		let imageFromTunnel: string = 'https://tunnel.kumocloud.online/secure/' + userCountry
 		
 		let currentDateTime: Date = new Date();
 		
