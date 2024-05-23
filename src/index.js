@@ -13,7 +13,9 @@ export default {
 		
 		const url = new URL(request.url);
     	const country = url.pathname.slice(url.pathname.lastIndexOf('/') + 1);
-    	const country_key = country + '.png';
+    	const country_key = country.toLowerCase() + '.png';
+    	
+    	console.log(country_key);
     	
     	switch (request.method) {
     		case 'GET':
@@ -26,9 +28,7 @@ export default {
     			const headers = new Headers();
     			obj.writeHttpMetadata(headers);
     			headers.set('etag', obj.httpEtag);
-    			
-    			console.log("%o", obj.body);
-    			//console.log(JSON.stringify(obj.body));
+    		
     			
     			return new Response(obj.body, {headers,});
     			
